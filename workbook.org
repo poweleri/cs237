@@ -7,6 +7,11 @@
 #+OPTIONS: html-postamble:t
 #+STARTUP: entitiespretty
 
+* Scratch
+#+BEGIN_SRC emacs-lisp :results silent
+  
+#+END_SRC 
+
 * Week 00
 ** CRC
   Q:What is this doing here?
@@ -63,7 +68,7 @@
 ** UJF
 
 * Week 01
-** ABC
+** ABE
 *** OQP
 
 It is not very clear what I am supposed to do, but here is what I have
@@ -299,7 +304,7 @@ Variable Pvp: The program should let you go as far as the list is defined
  	 	 	 	 	 	 	 
   !(^[adic9) times (9 div 9) =	6
  	 	 	 	 	 	 	 
-
+** ABF
 *** UCA
     Is something wrong?
     Water is essential to life
@@ -328,7 +333,7 @@ Variable Pvp: The program should let you go as far as the list is defined
     3. Simple
     4. Compound
 
-
+** ABG
 *** UWM
     1. Two plus two does not equal four
     2. Two plus two is greater than four
@@ -356,7 +361,7 @@ Variable Pvp: The program should let you go as far as the list is defined
     5. Exclusive
     6. Exclusive
 
-
+** ABI
 *** UOT
     p q r p&q !r (p&q)or!r
     0 0 0  0   1     1
@@ -370,8 +375,7 @@ Variable Pvp: The program should let you go as far as the list is defined
 
 
 
-
-
+** ABK
 *** OIM
     The binary sequence related to the second set of collums (001, 010, etc.)
     matches the 3rd collum in the first set (`A & `B & C)
@@ -384,8 +388,8 @@ Variable Pvp: The program should let you go as far as the list is defined
 
    #+RESULTS:
    | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
-
-
+ 
+** ABL
 *** OJL 
     p ∧ q ∧ r
 
@@ -415,6 +419,7 @@ Variable Pvp: The program should let you go as far as the list is defined
 
 **** 3
      
+** ABM
 *** OIO
    #+BEGIN_SRC emacs-lisp
      (setq A [size]
@@ -441,7 +446,6 @@ Variable Pvp: The program should let you go as far as the list is defined
     2.¬p \rightarrow q 
     3. p \rightarrow ¬q 
     4. (¬p ∧ ¬q) ∨ (p ∧ q)
-
 
 
 *** OYU
@@ -525,7 +529,6 @@ Variable Pvp: The program should let you go as far as the list is defined
      | 1 | 0 |   1   |
      | 1 | 1 |   1   |
     
-
 *** OJM
 **** 1
      | 0 | 0 |   0   |
@@ -580,7 +583,7 @@ Variable Pvp: The program should let you go as far as the list is defined
     | 1 | 1 | 0 |     0 |
     | 1 | 1 | 1 |     1 |
     
-
+** ABN
 *** UJU
 **** 1
      | p | q | p ∨ q |
@@ -607,7 +610,6 @@ Variable Pvp: The program should let you go as far as the list is defined
      | 0 | 1 |     0 |
      | 1 | 0 |     0 |
      | 1 | 1 |     1 |
-
 
 
 *** OLH
@@ -720,35 +722,103 @@ Variable Pvp: The program should let you go as far as the list is defined
 *** UEZ
     \neg p \vee \neg q \wedge \neg r
 
-
+** ABO
 *** OYW
-#+BEGIN_SRC  emacs-lisp
-(defun prop-eval (prop)
-  (unless (and (vectorp prop)
-               (= 3 (length prop))
-               (valid-connective (elt prop 1)))
-    (error "bad parameters"))
-  (let* ((op (elt prop 1))
-         (l (eval (elt prop 0)))
-         (r (eval (elt prop 2)))
-         (lval (y-or-n-p (mapconcat 'symbol-name l " ")))
-         (rval (y-or-n-p (mapconcat 'symbol-name r " ")))
-         (result (eval (list op lval rval))))
-    (list l (list lval) op r (list rval) 'yields result)))
-#+END_SRC 
+***** defun prop-eval
+#+BEGIN_SRC emacs-lisp :results silent
+  (defun --> (p q)
+    "Conditional: p only if q"
+    (or (not p) q))
 
-#+RESULTS:
-: prop-eval
+  (defun <--> (p q)
+    "Biconditional: p if and only if q"
+    (and (--> p q) (--> q p)))
 
-#+BEGIN_SRC  emacs-lisp
-  (let* ((p [it is raining])
-         (q [the grass is wet])
-         (p-and-q [p and q])
-    (prop-eval p-and-q)))
+  (defun valid-connective (op)
+    (or (eq op 'and) (eq op 'or) (eq op 'xor)
+        (eq op '-->) (eq op '<-->)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :results silent
+  (defun prop-eval (prop)
+    (unless (and (vectorp prop)
+                 (= 3 (length prop))
+                 (valid-connective (elt prop 1)))
+      (error "bad parameters"))
+    (let* ((op (elt prop 1))
+           (l (eval (elt prop 0)))
+           (r (eval (elt prop 2)))
+           (lval (y-or-n-p (mapconcat 'symbol-name l " ")))
+           (rval (y-or-n-p (mapconcat 'symbol-name r " ")))
+           (result (eval (list op lval rval))))
+      (list l (list lval) op r (list rval) 'yields result)))
+#+END_SRC
+
+***** and
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-and-q [p and q]))
+    (prop-eval p-and-q))
 #+END_SRC
 
 #+RESULTS:
+([It is raining] (t) and [The grass is wet] (t) yields t)
 
+***** -->
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-onlyif-q [p --> q]))
+    (prop-eval p-onlyif-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (nil) --> [The grass is wet] (t) yields t)
+([It is raining] (t) --> [The grass is wet] (nil) yields nil)
+
+***** <-->
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-equivalent-q [p <--> q]))
+    (prop-eval p-equivalent-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (t) <--> [The grass is wet] (t) yields t)
+
+***** OR
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-or-q [p or q]))
+    (prop-eval p-or-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (t) or [The grass is wet] (t) yields t)
+
+
+***** xor
+      
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-xor-q [p xor q]))
+    (prop-eval p-xor-q))
+#+END_SRC
+
+*** UEF
+    
+*** OUB
+*** UQY
+
+** Other
 *** Email Puzzle 1 "Clock"
 *** Email Puzzle 2 "Hat Problem"
     a. The student is wearing a white hat. She knows this based off of a few facts.
