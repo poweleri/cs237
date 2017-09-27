@@ -1,0 +1,763 @@
+#+TITLE: Workbook for DM1
+#+AUTHOR: Eric Powell
+#+EMAIL: pow13009@byui.edu
+#+DATE: 22 September 2017
+#+LANGUAGE: en
+#+OPTIONS: H:5 num:nil toc:t \n:nil @:t ::t |:t ^:t *:t TeX:t LaTeX:t ':t |:t
+#+OPTIONS: html-postamble:t
+#+STARTUP: entitiespretty
+
+* Week 00
+** CRC
+  Q:What is this doing here?
+  A:I have no idea. Perhaps it is here as a reminder of 
+    seeking for water in a dry place. 
+
+  Q:What time is it?
+  A:12:56PM (at the time I am writing), or 3:45 if you are referring to the book
+
+  Q:Did his alarm not go off?
+  A:Obviously Yes, the alarm did not go off
+
+  Q:...his other book, what was it?
+  A:Where the Sidewalk Ends.
+
+  Q:Was he expecting more than two to?
+  A:Yes he was, but two would be fine
+
+  Q:Why had his parents...named him that? and Ishmael?... (and other self reflection questions [7 in total])
+  A:It is arbitrary. Any meaning gathered from the name is relative.
+
+  Q:"What do you prefer we call you?"
+  A:Abu
+
+** DGZ 
+  The time has come the Walrus said to talk of many things 
+  of shoes and ships and sealing wax of cabbages and kings 
+  and why the sea is boiling hot and wether pigs have wings
+  
+** CHJ
+  TSKTSKS (0/7)
+  
+** DOK
+
+  n  * n + 1 * 2n + 1
+
+  6  * 7  * 13 = 546
+  5  * 6  * 11 = 330
+  4  * 5  * 9  = 180
+  3  * 4  * 7  = 84
+  2  * 3  * 5  = 30
+  1  * 2  * 3  = 8
+
+  546/6 = 91 = 1 + 4 + 9 + 16 + 25 + 36
+  330/6 = 55 = 1 + 4 + 9 + 16 + 25
+  180/6 = 30 = 1 + 4 + 9 + 16
+  84/6  = 14 = 1 + 4 + 9
+  30/6  = 5 = 1 + 4
+  6/6   = 1
+
+  Each product (when divided by 6) is the sum of the square of each preceding integer.
+     Example is shown above
+
+** UJF
+
+* Week 01
+** ABC
+*** OQP
+
+It is not very clear what I am supposed to do, but here is what I have
+
+#+BEGIN_SRC  emacs-lisp
+123 
+#+END_SRC 
+
+#+RESULTS:
+: 123
+    
+PVP: 3.14159
+#+BEGIN_SRC  emacs-lisp
+ 3.1415926 
+#+END_SRC 
+
+#+RESULTS:
+: 3.1415926
+
+PVP: 42
+#+BEGIN_SRC  emacs-lisp
+  42
+#+END_SRC
+
+#+RESULTS:
+: 42
+
+PVP: 42
+#+BEGIN_SRC  emacs-lisp
+  42.
+#+END_SRC
+
+#+RESULTS:
+: 42
+
+PVP: .42
+#+BEGIN_SRC  emacs-lisp
+  .42
+#+END_SRC
+
+#+RESULTS:
+: 0.42
+
+#+BEGIN_SRC  emacs-lisp
+  "Dog bites man --- not news."
+#+END_SRC
+
+#+RESULTS:
+: Dog bites man --- not news.
+
+#+BEGIN_SRC  emacs-lisp
+  "Man bites dog --- news!"
+#+END_SRC
+
+#+RESULTS:
+: Man bites dog --- news!
+
+#+BEGIN_SRC  emacs-lisp
+  ?H
+#+END_SRC
+
+#+RESULTS:
+: 72
+
+#+BEGIN_SRC  emacs-lisp
+  ?a
+#+END_SRC
+
+#+RESULTS:
+: 97
+
+#+BEGIN_SRC  emacs-lisp
+  t
+#+END_SRC
+
+#+RESULTS:
+: t
+
+#+BEGIN_SRC  emacs-lisp
+  nil
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC  emacs-lisp
+  (+ 1 2 3)
+#+END_SRC
+
+#+RESULTS:
+: 6
+
+#+BEGIN_SRC  emacs-lisp
+  (list 1 3 5)
+#+END_SRC
+
+#+RESULTS:
+| 1 | 3 | 5 |
+
+#+BEGIN_SRC  emacs-lisp
+  (format "%s" '(1 2 3))
+#+END_SRC
+
+#+RESULTS:
+: (1 2 3)
+
+#+BEGIN_SRC  emacs-lisp
+  (format "%S" "abc")
+#+END_SRC
+
+#+RESULTS:
+: "abc"
+
+#+BEGIN_SRC  emacs-lisp
+  (elt [A B C] 0)
+#+END_SRC
+
+#+RESULTS:
+: A
+
+#+BEGIN_SRC  emacs-lisp
+  (elt [A B C] 2)
+#+END_SRC
+
+#+RESULTS:
+: C
+
+#+BEGIN_SRC  emacs-lisp
+  (elt [A B C] 3)
+#+END_SRC
+
+#+BEGIN_SRC  emacs-lisp
+  (vector (elt "ABC" 0) (elt "abc" 1) (elt "XyZ" 2))
+#+END_SRC
+
+#+RESULTS:
+: [65 98 90]
+
+#+BEGIN_SRC  emacs-lisp
+  (append ' (a b c) '(0 1 2))
+#+END_SRC
+
+#+RESULTS:
+| a | b | c | 0 | 1 | 2 |
+
+#+BEGIN_SRC  emacs-lisp
+  (append [a b c] nil)
+#+END_SRC 
+
+#+RESULTS:
+| a | b | c |
+
+Variable Pvp: The program should let you go as far as the list is defined
+
+#+BEGIN_SRC emacs-lisp
+  (setq abc '(1 2 3 4 5 6 7 8 9))
+  (first abc)
+  (second abc)
+  (fifth abc)
+#+END_SRC
+
+#+RESULTS:
+: 5
+
+#+BEGIN_SRC emacs-lisp
+  (rot13 "zvpxr1@znfgrevatrznpf.bet")
+#+END_SRC 
+
+#+RESULTS:
+: micke1@masteringemacs.org
+
+#+BEGIN_SRC emacs-lisp
+  (rot13 (rot13 "zvpxr1@znfgrevatrznpf.bet"))
+#+END_SRC 
+
+#+RESULTS:
+: zvpxr1@znfgrevatrznpf.bet
+
+  PVP -- frobulate
+    I predict the outcome will be :7 6 5 4 3 2 1 and thus reverse is a more fitting name
+
+#+BEGIN_SRC emacs-lisp
+  (defun frobulate (x)
+     (if x (append (frobulate (rest x)) (list (first x)))))
+#+END_SRC
+
+#+RESULTS:
+: frobulate
+
+#+BEGIN_SRC emacs-lisp
+  (frobulate '(1 2 3 4 5 6 7))
+#+END_SRC
+
+#+RESULTS:
+| 7 | 6 | 5 | 4 | 3 | 2 | 1 |
+
+   
+
+*** USV
+   #+BEGIN_SRC emacs-lisp
+     (rot13 "Or pyrire jvgu ahzoref. 
+             Svaq n jnl gb vafreg vagb gurfr gra yvarf gur sbhe 
+             fgnaqneq zngu bcrengbef (+, -, \gvzrf, \qvi), be ! 
+             (snpgbevny), be \enqvp (fdhner ebbg), naq cneragurfrf 
+             sbe tebhcvat, gb znxr gra qvssrerag rkcerffvbaf gung 
+             rnpu rinyhngr gb 6. Sbe rknzcyr: \enqvp4 + \enqvp4 + \enqvp4 = 6") 
+   #+END_SRC 
+
+   #+RESULTS:
+   : Be clever with numbers. 
+   :         Find a way to insert into these ten lines the four 
+   :         standard math operators (+, -, times, div), or ! 
+   :         (factorial), or adic (square root), and parentheses 
+   :         for grouping, to make ten different expressions that 
+   :         each evaluate to 6. For example: adic4 + adic4 + adic4 = 6
+  
+ !(!0 + !0 + !0) = 6
+ 	 	 	 	 	 	 	 
+   !(1	+	1	+	1) = 6
+ 	 	 	 	 	 	 	 
+      2 + 2 + 2	 = 6
+ 	 	 	 	 	 	 	 
+ ^[adic( 3	times	3) + 	3	=	6
+
+ ^[adic4 + ^[adic4 + ^[adic4 = 6
+ 	 	 	 	 	 	 	 
+  5	+	(5 div 5)	=	6
+ 	 	 	 	 	 	 	 
+  6	times (6 div 6) =	6
+ 	 	 	 	 	 	 	 
+  7	- (7 div 7)	=	6
+ 	 	 	 	 	 	 	 
+  8	- (^[adic(^[adic(8 + 8)))	=	6
+ 	 	 	 	 	 	 	 
+  !(^[adic9) times (9 div 9) =	6
+ 	 	 	 	 	 	 	 
+
+*** UCA
+    Is something wrong?
+    Water is essential to life
+    Food is good.
+
+    Go up the stairs
+    Who cares?
+    Come to Zion.
+    
+*** ODS
+    1. true
+    2. false
+    3. false
+    4. This is not a proposition
+    5. This is not a proposition
+    6. This is not a proposition
+    7. This is not a proposition
+    8. This is not a proposition
+
+*** UGX
+    v ∈ C
+
+*** OGR
+    1. Simple
+    2. Compound
+    3. Simple
+    4. Compound
+
+
+*** UWM
+    1. Two plus two does not equal four
+    2. Two plus two is greater than four
+    3. Toronto is not the capital of Germany
+    4. A total eclispse happens frequently
+    5. Special measures musn't be taken to deal with the current situation
+
+*** OPZ
+    1. I did not study
+    2. I studied or I got an F on the test
+    3. I studied and I got an F on the test
+    4. I did not study and I did not get an F on the test
+    5. I did not sutdy or get an F on the test
+    6. I will not study or get an F on the test
+
+*** UOX
+    elisp has a if form which acts as a if-else block in c++ which if the conditional
+    is true, it will evaluate the first statement, else it will evaluate the second
+
+*** OTX
+    1. Exculsive
+    2. Inclusive
+    3. Inclusive
+    4. Inclusive
+    5. Exclusive
+    6. Exclusive
+
+
+*** UOT
+    p q r p&q !r (p&q)or!r
+    0 0 0  0   1     1
+    0 0 1  0   0     0 
+    0 1 0  0   1     1
+    0 1 1  0   0     0
+    1 0 0  0   1     1
+    1 0 1  0   0     0
+    1 1 0  1   1     1
+    1 1 1  1   0     1
+
+
+
+
+
+*** OIM
+    The binary sequence related to the second set of collums (001, 010, etc.)
+    matches the 3rd collum in the first set (`A & `B & C)
+
+*** UIN
+   #+BEGIN_SRC emacs-lisp
+     (setq A (set-difference '(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
+            '(A E H I K L M N O P U )))
+   #+END_SRC 
+
+   #+RESULTS:
+   | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
+
+
+*** OJL 
+    p ∧ q ∧ r
+
+*** UCG
+**** 1 
+    #+BEGIN_SRC  emacs-lisp
+      (setq A ["verve" "vim" "vigor"]
+            B ["butter" "vinegar" "pepper" "vigor"]
+            A-union-B ["verve" "vim" "vigor" "butter" "vinegar" "pepper" "vigor"])
+    #+END_SRC 
+
+    #+RESULTS:
+    : ["verve" "vim" "vigor" "butter" "vinegar" "pepper" "vigor"]
+
+**** 2  
+     #+BEGIN_SRC emacs-lisp
+       (seq-intersection '["verve" "vim" "vigor"]
+       ["butter" "vinegar" "pepper" "vigor"])
+     #+END_SRC 
+
+   #+RESULTS:
+   | vigor |
+
+    #+BEGIN_SRC  emacs-lisp
+       
+    #+END_SRC 
+
+**** 3
+     
+*** OIO
+   #+BEGIN_SRC emacs-lisp
+     (setq A [size]
+           a 4
+           B [b i g g e r i n s i z e]
+           b 12
+           A-is-a-subset-of-B t
+           a-is-less-than-or-equal-to-b t)
+   #+END_SRC 
+
+   #+RESULTS:
+   : t
+
+*** UIJ
+    3 \rightarrow 2 \rightarrow 1
+*** OQT
+   1. I got an A on the test because I studied
+   2. I neither studied nor got an A on the test
+   3. I would have studied or got an A on the test, so I didn't study
+   4. I did not get an A on the test because I didn't study
+
+*** UTQ
+    1. p∧q
+    2.¬p \rightarrow q 
+    3. p \rightarrow ¬q 
+    4. (¬p ∧ ¬q) ∨ (p ∧ q)
+
+
+
+*** OYU
+    q \rightarrow p;  p is nessicary for q to occur; q happens as a consequence of p; q only occurs when p is present
+
+*** UOH
+    1. p \rightarrow q
+    2. p \rightarrow q
+    3. p \rightarrow q
+
+*** OZD
+    1. t
+    2. nil
+    3. nil
+    4. t
+
+*** UZM
+    1. t
+    2. f
+    3. f
+    4. t
+
+*** OOY
+    1. if you want to win the contest, then you must sign up
+    2. if I go outside, then I get a cold
+    3. if you are an A student, then you cna recieve the scholarship
+    4. if you leave now, then you will get there on time
+    5. if I act now, thne I'll get half off
+
+*** UFZ
+    I have investigated converse, inverse, and contrapositive conditionals
+    I have no idea what else you want me to put here
+
+*** OKJ
+**** 1
+     We won't got to the park if it rains today 
+     If it doesn't rain today, we will go to the park
+     If will go to the park if it doesn't rain today
+**** 2
+     I'll give you a pat on the back if you do your homework
+     If you don't do your homework, I won't give you a pat on the back
+     I won't give you a pat on the back if you don't do your homework
+**** 3
+     I get sick whenever I babysit
+     Whenever I don't babysit, I don't get sick
+     I don't get sick whenever I don't babysit
+**** 4
+     I go to class everytime there is a quiz
+     Whenever there isn't a quiz, I don't go to class
+     I don't go to class when there is no quiz
+**** 5
+     when I stay up past my bedtime I wake up late
+     I wake up early when I go to bed at my bedtime
+     When I go to bed on time, I wake up early
+
+*** UVH
+**** 1
+     | p | q | p \rightarrow q | 
+     | 0 | 0 |   0   |
+     | 0 | 1 |   0   |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   1   |
+**** 2
+     | p | q | p xor q  | 
+     | 0 | 0 |   0   |
+     | 0 | 1 |   1  |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   0  |
+**** 3
+     see 1
+**** 4
+     | p | q | ¬p \rightarrow q | 
+     | 0 | 0 |   1   |
+     | 0 | 1 |   1   |
+     | 1 | 0 |   0   |
+     | 1 | 1 |   0   |
+**** 5
+     | p | q | p \rightarrow  ¬q | 
+     | 0 | 0 |   0   |
+     | 0 | 1 |   0   |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   1   |
+    
+
+*** OJM
+**** 1
+     | 0 | 0 |   0   |
+     | 0 | 1 |   0   |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   0   |
+
+**** 2
+     | 0 | 0 |   1  |
+     | 0 | 1 |   0   |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   0  |
+
+**** 3
+     | 0 | 0 |   0   |
+     | 0 | 1 |   0   |
+     | 1 | 0 |   1   |
+     | 1 | 1 |   1   |
+
+**** 4 
+     This is always true
+
+**** 5 
+     This is always true
+
+*** ULQ
+    | p | q | r | s | final |
+    | 0 | 0 | 0 | 0 |     0 |
+    | 0 | 0 | 0 | 1 |     0 |
+    | 0 | 0 | 1 | 0 |     0 |
+    | 0 | 0 | 1 | 1 |     0 |
+    | 0 | 1 | 0 | 0 |     0 |
+    | 0 | 1 | 0 | 1 |     0 |
+    | 0 | 1 | 1 | 0 |     0 |
+    | 0 | 1 | 1 | 1 |     0 |
+    | 1 | 0 | 0 | 0 |     0 |
+    | 1 | 0 | 0 | 1 |     0 |
+    | 1 | 0 | 1 | 0 |     0 |
+    | 1 | 0 | 1 | 1 |     0 |
+    | 1 | 1 | 0 | 0 |     0 |
+    | 1 | 1 | 0 | 1 |     0 |
+    | 1 | 1 | 1 | 1 |     1 |
+
+*** OTD
+    | p | q | r | final |
+    | 0 | 0 | 0 |     0 |
+    | 0 | 0 | 1 |     0 |
+    | 0 | 1 | 0 |     0 |
+    | 0 | 1 | 1 |     1 |
+    | 1 | 0 | 0 |     0 |
+    | 1 | 0 | 1 |     1 |
+    | 1 | 1 | 0 |     0 |
+    | 1 | 1 | 1 |     1 |
+    
+
+*** UJU
+**** 1
+     | p | q | p ∨ q |
+     | 0 | 0 |     0 |
+     | 0 | 1 |     1 |
+     | 1 | 0 |     1 |
+     | 1 | 1 |     1 |
+     
+     | q | p | q ∨ p |
+     | 0 | 0 |     0 |
+     | 0 | 1 |     1 |
+     | 1 | 0 |     1 |
+     | 1 | 1 |     1 |
+
+**** 2
+     | p | q | p \wedge q |
+     | 0 | 0 |     0 |
+     | 0 | 1 |     0 |
+     | 1 | 0 |     0 |
+     | 1 | 1 |     1 |
+     
+     | q | p | q \wedge p |
+     | 0 | 0 |     0 |
+     | 0 | 1 |     0 |
+     | 1 | 0 |     0 |
+     | 1 | 1 |     1 |
+
+
+
+*** OLH
+**** 1
+    | p | q | r | (p \vee q) | (p \vee q) \vee r | (q \vee r) | p \vee (q \vee r) |
+    | 0 | 0 | 0 |       0 |           0 |       0 |           0 |
+    | 0 | 0 | 1 |       0 |           1 |       1 |           1 |
+    | 0 | 1 | 0 |       1 |           1 |       1 |           1 |
+    | 0 | 1 | 1 |       1 |           1 |       1 |           1 |
+    | 1 | 0 | 0 |       1 |           1 |       0 |           1 |
+    | 1 | 0 | 1 |       1 |           1 |       1 |           1 |
+    | 1 | 1 | 0 |       1 |           1 |       1 |           1 |
+    | 1 | 1 | 1 |       1 |           1 |       1 |           1 |
+
+**** 2
+    | p | q | r | (p \wedge q) | (p \wedge q) \wedge r | (q \wedge r) | p \wedge (q \wedge r) |
+    | 0 | 0 | 0 |       0 |           0 |       0 |           0 |
+    | 0 | 0 | 1 |       0 |           0 |       0 |           0 |
+    | 0 | 1 | 0 |       0 |           0 |       0 |           0 |
+    | 0 | 1 | 1 |       0 |           0 |       1 |           0 |
+    | 1 | 0 | 0 |       0 |           0 |       0 |           0 |
+    | 1 | 0 | 1 |       0 |           0 |       0 |           0 |
+    | 1 | 1 | 0 |       1 |           0 |       0 |           0 |
+    | 1 | 1 | 1 |       1 |           1 |       1 |           1 |
+
+*** UWY
+**** 1
+     | p | q | r | p \wedge (q \vee r) | (p \wedge q) \vee (p \wedge r) |
+     | 0 | 0 | 0 |           0 |                 0 |
+     | 0 | 0 | 1 |           0 |                 0 |
+     | 0 | 1 | 0 |           0 |                 0 |
+     | 0 | 1 | 1 |           0 |                 0 |
+     | 1 | 0 | 0 |           0 |                 0 |
+     | 1 | 0 | 1 |           1 |                 1 |
+     | 1 | 1 | 0 |           1 |                 1 |
+     | 1 | 1 | 1 |           1 |                 1 |
+
+**** 2
+     | p | q | r | p \vee (q \wedge r) | (p \vee q) \wedge (p \vee r) |
+     | 0 | 0 | 0 |           0 |                 0 |
+     | 0 | 0 | 1 |           0 |                 0 |
+     | 0 | 1 | 0 |           0 |                 0 |
+     | 0 | 1 | 1 |           1 |                 1 |
+     | 1 | 0 | 0 |           1 |                 1 |
+     | 1 | 0 | 1 |           1 |                 1 |
+     | 1 | 1 | 0 |           1 |                 1 |
+     | 1 | 1 | 1 |           1 |                 1 |
+
+*** OBW
+**** 1
+     | p | q | \neg p | \neg q | \neg p \wedge \neg q | \neg(p \vee q) |
+     | 0 | 0 |   1 |   1 |         1 |        1 |
+     | 0 | 1 |   1 |   0 |         0 |        0 |
+     | 1 | 0 |   0 |   1 |         0 |        0 |
+     | 1 | 1 |   0 |   0 |         0 |        0 | 
+
+**** 2
+     | p | q | \neg p | \neg q | \neg p \vee \neg q | \neg(p \wedge q) |
+     | 0 | 0 |   1 |   1 |         1 |        1 |
+     | 0 | 1 |   1 |   0 |         1 |        1 |
+     | 1 | 0 |   0 |   1 |         1 |        1 |
+     | 1 | 1 |   0 |   0 |         0 |        0 | 
+
+*** USL
+**** 1
+     | p | p \wedge 1 |
+     | 0 |     0 |
+     | 1 |     1 |
+
+**** 2 
+     | p | p \vee 0 |
+     | 0 |     0 |
+     | 1 |     1 |
+    
+**** 3 
+     | p | \neg p | \neg\neg p |
+     | 0 |   1 |    0 |
+     | 1 |   0 |    1 |
+
+**** 4 
+     | p | p \wedge 0 |
+     | 0 |     0 |
+     | 1 |     0 |
+
+**** 5
+     | p | p \vee 1 |
+     | 0 |     1 |
+     | 1 |     1 |
+
+*** OYP
+**** 1 - idempotence
+**** 2 - absorbsion
+**** 3 - idempotence
+**** 4 - absorbsion
+**** 5 - double negation
+
+*** UBV
+    1. Losing the first round is not necessary for losing the trophy
+    2. losing the tournament is not sffecient for losing the trophy
+    3. I am not weak nor unsuccessful 
+    4. you cannot pass and fail this test
+    5. Not getting an A on the final exam is not necessary nor suffecient for failing this class
+
+*** OKQ
+
+*** UKF
+
+*** OKL
+
+*** UEZ
+    \neg p \vee \neg q \wedge \neg r
+
+
+*** OYW
+#+BEGIN_SRC  emacs-lisp
+(defun prop-eval (prop)
+  (unless (and (vectorp prop)
+               (= 3 (length prop))
+               (valid-connective (elt prop 1)))
+    (error "bad parameters"))
+  (let* ((op (elt prop 1))
+         (l (eval (elt prop 0)))
+         (r (eval (elt prop 2)))
+         (lval (y-or-n-p (mapconcat 'symbol-name l " ")))
+         (rval (y-or-n-p (mapconcat 'symbol-name r " ")))
+         (result (eval (list op lval rval))))
+    (list l (list lval) op r (list rval) 'yields result)))
+#+END_SRC 
+
+#+RESULTS:
+: prop-eval
+
+#+BEGIN_SRC  emacs-lisp
+  (let* ((p [it is raining])
+         (q [the grass is wet])
+         (p-and-q [p and q])
+    (prop-eval p-and-q)))
+#+END_SRC
+
+#+RESULTS:
+
+*** Email Puzzle 1 "Clock"
+*** Email Puzzle 2 "Hat Problem"
+    a. The student is wearing a white hat. She knows this based off of a few facts.
+    First it is important to note that there is only 7 possible combination of hats.
+    When the first student looks at the other 2 and cannot determine what color hat 
+    he is wearing, that means that the other two people are not wearing red hats, which
+    is the only way he could know what hat he is wearing. This also must mean that at
+    least student 2 or 3 is wearing a white hat. In order for studet 2 to know what hat
+    he or she is wearing is to see that student 3 is wearing a red hat (because of the 
+    fact that student one saw at least one white hat). So using those facts, Student 3 
+    is wearing a white hat. 
+   
