@@ -7,6 +7,8 @@
 #+OPTIONS: html-postamble:t
 #+STARTUP: entitiespretty
 
+This is a test for gitHub!
+
 * Scratch
 #+BEGIN_SRC emacs-lisp :results silent
   
