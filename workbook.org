@@ -1,303 +1,293 @@
 #+TITLE: Workbook for DM1
 #+AUTHOR: Eric Powell
 #+EMAIL: pow13009@byui.edu
-#+DATE: 22 September 2017
+#+DATE: 8 January 2018
 #+LANGUAGE: en
 #+OPTIONS: H:5 num:nil toc:t \n:nil @:t ::t |:t ^:t *:t TeX:t LaTeX:t ':t |:t
 #+OPTIONS: html-postamble:t
 #+STARTUP: entitiespretty
 
 * Week 00
-** CRC
-  Q:What is this doing here?
-  A:I have no idea. Perhaps it is here as a reminder of 
-    seeking for water in a dry place. 
-
-  Q:What time is it?
-  A:12:56PM (at the time I am writing), or 3:45 if you are referring to the book
-
-  Q:Did his alarm not go off?
-  A:Obviously Yes, the alarm did not go off
-
-  Q:...his other book, what was it?
-  A:Where the Sidewalk Ends.
-
-  Q:Was he expecting more than two to?
-  A:Yes he was, but two would be fine
-
-  Q:Why had his parents...named him that? and Ishmael?... (and other self reflection questions [7 in total])
-  A:It is arbitrary. Any meaning gathered from the name is relative.
-
-  Q:"What do you prefer we call you?"
-  A:Abu
+** RC
+   Q:Propose a connection between discrete mathematics and the image above.
+   A: Although the picture of the sand dunes seems to be shaped in some sort of 
+   scale, the dunes are made of individual and discrete grains of sand.
 
 ** DGZ 
-  The time has come the Walrus said to talk of many things 
-  of shoes and ships and sealing wax of cabbages and kings 
-  and why the sea is boiling hot and wether pigs have wings
+   The time has come the Walrus said to talk of many things 
+   of shoes and ships and sealing wax of cabbages and kings 
+   and why the sea is boiling hot and wether pigs have wings
   
 ** CHJ
-  TSKTSKS (0/7)
+   TSKTSKS (0/7)
   
 ** DOK
+   n  * n + 1 * 2n + 1
 
-  n  * n + 1 * 2n + 1
+   6  * 7  * 13 = 546
+   5  * 6  * 11 = 330
+   4  * 5  * 9  = 180
+   3  * 4  * 7  = 84
+   2  * 3  * 5  = 30
+   1  * 2  * 3  = 8
 
-  6  * 7  * 13 = 546
-  5  * 6  * 11 = 330
-  4  * 5  * 9  = 180
-  3  * 4  * 7  = 84
-  2  * 3  * 5  = 30
-  1  * 2  * 3  = 8
+   546/6 = 91 = 1 + 4 + 9 + 16 + 25 + 36
+   330/6 = 55 = 1 + 4 + 9 + 16 + 25
+   180/6 = 30 = 1 + 4 + 9 + 16
+   84/6  = 14 = 1 + 4 + 9
+   30/6  = 5 = 1 + 4
+   6/6   = 1
 
-  546/6 = 91 = 1 + 4 + 9 + 16 + 25 + 36
-  330/6 = 55 = 1 + 4 + 9 + 16 + 25
-  180/6 = 30 = 1 + 4 + 9 + 16
-  84/6  = 14 = 1 + 4 + 9
-  30/6  = 5 = 1 + 4
-  6/6   = 1
+   Each product (when divided by 6) is the sum of the square of each preceding integer.
+   Example is shown above
 
-  Each product (when divided by 6) is the sum of the square of each preceding integer.
-     Example is shown above
+** CJF
+   In response, I think that G.H. Hardy meant that when that occurs, the pattern discovered
+   is more natural than imposed, impliying that mathematicians discover patterns.
 
-** UJF
+   654321
+
+   CLAHCK
+   
+** DZB
+   The Circles radius is approximatly 8.7
 
 * Week 01
 ** ABC
 *** OQP
 
-It is not very clear what I am supposed to do, but here is what I have
+    It is not very clear what I am supposed to do, but here is what I have
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
 123 
-#+END_SRC 
+    #+END_SRC 
 
-#+RESULTS:
-: 123
+    #+RESULTS:
+    : 123
     
-PVP: 3.14159
-#+BEGIN_SRC  emacs-lisp
+    PVP: 3.14159
+    #+BEGIN_SRC  emacs-lisp
  3.1415926 
-#+END_SRC 
+    #+END_SRC 
 
-#+RESULTS:
-: 3.1415926
+    #+RESULTS:
+    : 3.1415926
 
-PVP: 42
-#+BEGIN_SRC  emacs-lisp
+    PVP: 42
+    #+BEGIN_SRC  emacs-lisp
   42
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 42
+    #+RESULTS:
+    : 42
 
-PVP: 42
-#+BEGIN_SRC  emacs-lisp
+    PVP: 42
+    #+BEGIN_SRC  emacs-lisp
   42.
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 42
+    #+RESULTS:
+    : 42
 
-PVP: .42
-#+BEGIN_SRC  emacs-lisp
+    PVP: .42
+    #+BEGIN_SRC  emacs-lisp
   .42
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 0.42
+    #+RESULTS:
+    : 0.42
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   "Dog bites man --- not news."
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: Dog bites man --- not news.
+    #+RESULTS:
+    : Dog bites man --- not news.
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   "Man bites dog --- news!"
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: Man bites dog --- news!
+    #+RESULTS:
+    : Man bites dog --- news!
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   ?H
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 72
+    #+RESULTS:
+    : 72
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   ?a
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 97
+    #+RESULTS:
+    : 97
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   t
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: t
+    #+RESULTS:
+    : t
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   nil
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
+    #+RESULTS:
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (+ 1 2 3)
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 6
+    #+RESULTS:
+    : 6
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (list 1 3 5)
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-| 1 | 3 | 5 |
+    #+RESULTS:
+    | 1 | 3 | 5 |
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (format "%s" '(1 2 3))
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: (1 2 3)
+    #+RESULTS:
+    : (1 2 3)
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (format "%S" "abc")
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: "abc"
+    #+RESULTS:
+    : "abc"
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (elt [A B C] 0)
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: A
+    #+RESULTS:
+    : A
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (elt [A B C] 2)
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: C
+    #+RESULTS:
+    : C
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (elt [A B C] 3)
-#+END_SRC
+    #+END_SRC
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (vector (elt "ABC" 0) (elt "abc" 1) (elt "XyZ" 2))
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: [65 98 90]
+    #+RESULTS:
+    : [65 98 90]
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (append ' (a b c) '(0 1 2))
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-| a | b | c | 0 | 1 | 2 |
+    #+RESULTS:
+    | a | b | c | 0 | 1 | 2 |
 
-#+BEGIN_SRC  emacs-lisp
+    #+BEGIN_SRC  emacs-lisp
   (append [a b c] nil)
-#+END_SRC 
+    #+END_SRC 
 
-#+RESULTS:
-| a | b | c |
+    #+RESULTS:
+    | a | b | c |
 
-Variable Pvp: The program should let you go as far as the list is defined
+    Variable Pvp: The program should let you go as far as the list is defined
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
   (setq abc '(1 2 3 4 5 6 7 8 9))
   (first abc)
   (second abc)
   (fifth abc)
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: 5
+    #+RESULTS:
+    : 5
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
   (rot13 "zvpxr1@znfgrevatrznpf.bet")
-#+END_SRC 
+    #+END_SRC 
 
-#+RESULTS:
-: micke1@masteringemacs.org
+    #+RESULTS:
+    : micke1@masteringemacs.org
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
   (rot13 (rot13 "zvpxr1@znfgrevatrznpf.bet"))
-#+END_SRC 
+    #+END_SRC 
 
-#+RESULTS:
-: zvpxr1@znfgrevatrznpf.bet
+    #+RESULTS:
+    : zvpxr1@znfgrevatrznpf.bet
 
-  PVP -- frobulate
+    PVP -- frobulate
     I predict the outcome will be :7 6 5 4 3 2 1 and thus reverse is a more fitting name
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
   (defun frobulate (x)
      (if x (append (frobulate (rest x)) (list (first x)))))
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-: frobulate
+    #+RESULTS:
+    : frobulate
 
-#+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
   (frobulate '(1 2 3 4 5 6 7))
-#+END_SRC
+    #+END_SRC
 
-#+RESULTS:
-| 7 | 6 | 5 | 4 | 3 | 2 | 1 |
+    #+RESULTS:
+    | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
 
    
 
 *** USV
-   #+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
      (rot13 "Or pyrire jvgu ahzoref. 
              Svaq n jnl gb vafreg vagb gurfr gra yvarf gur sbhe 
              fgnaqneq zngu bcrengbef (+, -, \gvzrf, \qvi), be ! 
              (snpgbevny), be \enqvp (fdhner ebbg), naq cneragurfrf 
              sbe tebhcvat, gb znxr gra qvssrerag rkcerffvbaf gung 
              rnpu rinyhngr gb 6. Sbe rknzcyr: \enqvp4 + \enqvp4 + \enqvp4 = 6") 
-   #+END_SRC 
+    #+END_SRC 
 
-   #+RESULTS:
-   : Be clever with numbers. 
-   :         Find a way to insert into these ten lines the four 
-   :         standard math operators (+, -, times, div), or ! 
-   :         (factorial), or adic (square root), and parentheses 
-   :         for grouping, to make ten different expressions that 
-   :         each evaluate to 6. For example: adic4 + adic4 + adic4 = 6
+    #+RESULTS:
+    : Be clever with numbers. 
+    :         Find a way to insert into these ten lines the four 
+    :         standard math operators (+, -, times, div), or ! 
+    :         (factorial), or adic (square root), and parentheses 
+    :         for grouping, to make ten different expressions that 
+    :         each evaluate to 6. For example: adic4 + adic4 + adic4 = 6
   
- !(!0 + !0 + !0) = 6
+    !(!0 + !0 + !0) = 6
  	 	 	 	 	 	 	 
-   !(1	+	1	+	1) = 6
+    !(1	+	1	+	1) = 6
  	 	 	 	 	 	 	 
-      2 + 2 + 2	 = 6
+    2 + 2 + 2	 = 6
  	 	 	 	 	 	 	 
- ^[adic( 3	times	3) + 	3	=	6
+    ^[adic( 3	times	3) + 	3	=	6
 
- ^[adic4 + ^[adic4 + ^[adic4 = 6
+    ^[adic4 + ^[adic4 + ^[adic4 = 6
  	 	 	 	 	 	 	 
-  5	+	(5 div 5)	=	6
+    5	+	(5 div 5)	=	6
  	 	 	 	 	 	 	 
-  6	times (6 div 6) =	6
+    6	times (6 div 6) =	6
  	 	 	 	 	 	 	 
-  7	- (7 div 7)	=	6
+    7	- (7 div 7)	=	6
  	 	 	 	 	 	 	 
-  8	- (^[adic(^[adic(8 + 8)))	=	6
+    8	- (^[adic(^[adic(8 + 8)))	=	6
  	 	 	 	 	 	 	 
-  !(^[adic9) times (9 div 9) =	6
+    !(^[adic9) times (9 div 9) =	6
  	 	 	 	 	 	 	 
 
 *** UCA
@@ -377,13 +367,13 @@ Variable Pvp: The program should let you go as far as the list is defined
     matches the 3rd collum in the first set (`A & `B & C)
 
 *** UIN
-   #+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
      (setq A (set-difference '(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
             '(A E H I K L M N O P U )))
-   #+END_SRC 
+    #+END_SRC 
 
-   #+RESULTS:
-   | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
+    #+RESULTS:
+    | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
 
 
 *** OJL 
@@ -391,14 +381,14 @@ Variable Pvp: The program should let you go as far as the list is defined
 
 *** UCG
 **** 1 
-    #+BEGIN_SRC  emacs-lisp
+     #+BEGIN_SRC  emacs-lisp
       (setq A ["verve" "vim" "vigor"]
             B ["butter" "vinegar" "pepper" "vigor"]
             A-union-B ["verve" "vim" "vigor" "butter" "vinegar" "pepper" "vigor"])
-    #+END_SRC 
+     #+END_SRC 
 
-    #+RESULTS:
-    : ["verve" "vim" "vigor" "butter" "vinegar" "pepper" "vigor"]
+     #+RESULTS:
+     : ["verve" "vim" "vigor" "butter" "vinegar" "pepper" "vigor"]
 
 **** 2  
      #+BEGIN_SRC emacs-lisp
@@ -406,35 +396,35 @@ Variable Pvp: The program should let you go as far as the list is defined
        ["butter" "vinegar" "pepper" "vigor"])
      #+END_SRC 
 
-   #+RESULTS:
-   | vigor |
+     #+RESULTS:
+     | vigor |
 
-    #+BEGIN_SRC  emacs-lisp
+     #+BEGIN_SRC  emacs-lisp
        
-    #+END_SRC 
+     #+END_SRC 
 
 **** 3
      
 *** OIO
-   #+BEGIN_SRC emacs-lisp
+    #+BEGIN_SRC emacs-lisp
      (setq A [size]
            a 4
            B [b i g g e r i n s i z e]
            b 12
            A-is-a-subset-of-B t
            a-is-less-than-or-equal-to-b t)
-   #+END_SRC 
+    #+END_SRC 
 
-   #+RESULTS:
-   : t
+    #+RESULTS:
+    : t
 
 *** UIJ
     3 \rightarrow 2 \rightarrow 1
 *** OQT
-   1. I got an A on the test because I studied
-   2. I neither studied nor got an A on the test
-   3. I would have studied or got an A on the test, so I didn't study
-   4. I did not get an A on the test because I didn't study
+    1. I got an A on the test because I studied
+    2. I neither studied nor got an A on the test
+    3. I would have studied or got an A on the test, so I didn't study
+    4. I did not get an A on the test because I didn't study
 
 *** UTQ
     1. p∧q
@@ -761,3 +751,4 @@ Variable Pvp: The program should let you go as far as the list is defined
     fact that student one saw at least one white hat). So using those facts, Student 3 
     is wearing a white hat. 
    
+    
