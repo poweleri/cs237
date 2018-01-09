@@ -7,6 +7,13 @@
 #+OPTIONS: html-postamble:t
 #+STARTUP: entitiespretty
 
+This is a test for gitHub!
+
+* Scratch
+#+BEGIN_SRC emacs-lisp :results silent
+  
+#+END_SRC 
+
 * Week 00
 ** RC
    Q:Propose a connection between discrete mathematics and the image above.
@@ -53,7 +60,7 @@
    The Circles radius is approximatly 8.7
 
 * Week 01
-** ABC
+** ABE
 *** OQP
 
     It is not very clear what I am supposed to do, but here is what I have
@@ -289,7 +296,7 @@
  	 	 	 	 	 	 	 
     !(^[adic9) times (9 div 9) =	6
  	 	 	 	 	 	 	 
-
+** ABF
 *** UCA
     Is something wrong?
     Water is essential to life
@@ -318,7 +325,7 @@
     3. Simple
     4. Compound
 
-
+** ABG
 *** UWM
     1. Two plus two does not equal four
     2. Two plus two is greater than four
@@ -346,7 +353,7 @@
     5. Exclusive
     6. Exclusive
 
-
+** ABI
 *** UOT
     p q r p&q !r (p&q)or!r
     0 0 0  0   1     1
@@ -360,8 +367,7 @@
 
 
 
-
-
+** ABK
 *** OIM
     The binary sequence related to the second set of collums (001, 010, etc.)
     matches the 3rd collum in the first set (`A & `B & C)
@@ -372,10 +378,17 @@
             '(A E H I K L M N O P U )))
     #+END_SRC 
 
+<<<<<<< HEAD
     #+RESULTS:
     | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
 
 
+=======
+   #+RESULTS:
+   | B | C | D | F | G | J | Q | R | S | T | V | W | X | Y | Z |
+ 
+** ABL
+>>>>>>> 6f83a67064c3946c97cda95ee3098f37da61f5c2
 *** OJL 
     p ∧ q ∧ r
 
@@ -405,6 +418,7 @@
 
 **** 3
      
+** ABM
 *** OIO
     #+BEGIN_SRC emacs-lisp
      (setq A [size]
@@ -431,7 +445,6 @@
     2.¬p \rightarrow q 
     3. p \rightarrow ¬q 
     4. (¬p ∧ ¬q) ∨ (p ∧ q)
-
 
 
 *** OYU
@@ -515,7 +528,6 @@
      | 1 | 0 |   1   |
      | 1 | 1 |   1   |
     
-
 *** OJM
 **** 1
      | 0 | 0 |   0   |
@@ -570,7 +582,7 @@
     | 1 | 1 | 0 |     0 |
     | 1 | 1 | 1 |     1 |
     
-
+** ABN
 *** UJU
 **** 1
      | p | q | p ∨ q |
@@ -597,7 +609,6 @@
      | 0 | 1 |     0 |
      | 1 | 0 |     0 |
      | 1 | 1 |     1 |
-
 
 
 *** OLH
@@ -710,35 +721,103 @@
 *** UEZ
     \neg p \vee \neg q \wedge \neg r
 
-
+** ABO
 *** OYW
-#+BEGIN_SRC  emacs-lisp
-(defun prop-eval (prop)
-  (unless (and (vectorp prop)
-               (= 3 (length prop))
-               (valid-connective (elt prop 1)))
-    (error "bad parameters"))
-  (let* ((op (elt prop 1))
-         (l (eval (elt prop 0)))
-         (r (eval (elt prop 2)))
-         (lval (y-or-n-p (mapconcat 'symbol-name l " ")))
-         (rval (y-or-n-p (mapconcat 'symbol-name r " ")))
-         (result (eval (list op lval rval))))
-    (list l (list lval) op r (list rval) 'yields result)))
-#+END_SRC 
+***** defun prop-eval
+#+BEGIN_SRC emacs-lisp :results silent
+  (defun --> (p q)
+    "Conditional: p only if q"
+    (or (not p) q))
 
-#+RESULTS:
-: prop-eval
+  (defun <--> (p q)
+    "Biconditional: p if and only if q"
+    (and (--> p q) (--> q p)))
 
-#+BEGIN_SRC  emacs-lisp
-  (let* ((p [it is raining])
-         (q [the grass is wet])
-         (p-and-q [p and q])
-    (prop-eval p-and-q)))
+  (defun valid-connective (op)
+    (or (eq op 'and) (eq op 'or) (eq op 'xor)
+        (eq op '-->) (eq op '<-->)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :results silent
+  (defun prop-eval (prop)
+    (unless (and (vectorp prop)
+                 (= 3 (length prop))
+                 (valid-connective (elt prop 1)))
+      (error "bad parameters"))
+    (let* ((op (elt prop 1))
+           (l (eval (elt prop 0)))
+           (r (eval (elt prop 2)))
+           (lval (y-or-n-p (mapconcat 'symbol-name l " ")))
+           (rval (y-or-n-p (mapconcat 'symbol-name r " ")))
+           (result (eval (list op lval rval))))
+      (list l (list lval) op r (list rval) 'yields result)))
+#+END_SRC
+
+***** and
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-and-q [p and q]))
+    (prop-eval p-and-q))
 #+END_SRC
 
 #+RESULTS:
+([It is raining] (t) and [The grass is wet] (t) yields t)
 
+***** -->
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-onlyif-q [p --> q]))
+    (prop-eval p-onlyif-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (nil) --> [The grass is wet] (t) yields t)
+([It is raining] (t) --> [The grass is wet] (nil) yields nil)
+
+***** <-->
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-equivalent-q [p <--> q]))
+    (prop-eval p-equivalent-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (t) <--> [The grass is wet] (t) yields t)
+
+***** OR
+
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-or-q [p or q]))
+    (prop-eval p-or-q))
+#+END_SRC
+
+#+RESULTS:
+([It is raining] (t) or [The grass is wet] (t) yields t)
+
+
+***** xor
+      
+#+BEGIN_SRC emacs-lisp :results raw
+  (let* ((p [It is raining])
+         (q [The grass is wet])
+         (p-xor-q [p xor q]))
+    (prop-eval p-xor-q))
+#+END_SRC
+
+*** UEF
+    
+*** OUB
+*** UQY
+
+** Other
 *** Email Puzzle 1 "Clock"
 *** Email Puzzle 2 "Hat Problem"
     a. The student is wearing a white hat. She knows this based off of a few facts.
